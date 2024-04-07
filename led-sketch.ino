@@ -1,4 +1,4 @@
-#include <Adafruit_NeoPixel.h>
+#include <Adafruit_xNeoPixel.h>
 #include <Bounce2.h>
 
 #include "global-vars.h"
@@ -54,6 +54,7 @@ void setup() {
 
 void loop() {
   unix now = getTime();
+  // Serial.println(now);
   debouncer.update();
   if (buttonPressed && debouncer.fell()) {
     previousButMode = butMode;
